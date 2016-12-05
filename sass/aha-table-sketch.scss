@@ -1,0 +1,182 @@
+/*
+ * Copyright (c) 2014 GE Global Research. All rights reserved.
+ *
+ * The copyright to the computer software herein is the property of
+ * GE Global Research. The software may be used and/or copied only
+ * with the written permission of GE Global Research or in accordance
+ * with the terms and conditions stipulated in the agreement/contract
+ * under which the software has been supplied.
+ */
+
+//
+// Sass for the "sketch" notion of the px-data-table component
+//
+// @author
+//
+
+/*
+THIS FILE SHOULD CONTAIN ONLY ABSTRACT/'SKETCH' THEME RULES, NOT SPECIFIC TO PREDIX BRANDING
+Predix branding rules go in px-data-table-predix.scss, not in this file.
+*/
+
+
+
+// Generic
+@import "px-normalize-design/_generic.normalize.scss";
+@import "px-box-sizing-design/_generic.box-sizing.scss";
+@import "px-helpers-design/_generic.helpers.scss";
+
+// Base
+@import "px-flexbox-design/_base.flexbox.scss";
+@import "px-viewport-design/_base.viewport.scss";
+@import "px-iconography-design/_base.iconography.scss";
+
+$inuit-enable-input--tiny       : true;
+$inuit-enable-text-input--bare  : true;
+
+@import "px-forms-design/_base.forms.scss";
+
+$inuit-enable-table--fixed      : true;
+$inuit-enable-table--small      : true;
+$inuit-enable-table--large      : true;
+$inuit-enable-table--rows       : true;
+$inuit-enable-table--columns    : true;
+$inuit-table-border-color       : $gray5;
+
+@import "px-tables-design/_base.tables.scss";
+
+@import "px-layout-design/_objects.layout.scss";
+
+$inuit-enable-btn--bare         : true;
+$inuit-enable-btn--primary      : true;
+$inuit-enable-btn--icon         : true;
+$inuit-enable-btn--disabled     : true;
+
+@import "px-buttons-design/_objects.buttons.scss";
+
+.th{
+  @extend th;
+  display: table-cell;
+}
+
+.table{
+  @extend table;
+  display: table;
+}
+
+.tr{
+  @extend tr;
+  display: table-row;
+}
+
+.td{
+  @extend td;
+  display: table-cell;
+}
+
+:host {
+  display: block;
+  overflow-x: hidden;
+}
+
+.scroll-body{
+  display: block;
+  overflow-x: scroll;
+}
+
+td {
+  & .viewing {
+    min-height: 1em;
+    max-height: 30px;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+}
+
+th {
+  border: 0 !important;
+  text-align: left;
+  vertical-align: bottom;
+}
+
+.searchable input,
+.searchable select {
+  width: 20px;
+}
+
+.column-head {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+// .filter-group{
+//   display: inline-table;
+//   position: relative;
+// }
+//
+// .filter-icon {
+//   position: absolute;
+//   top: 0px;
+//   right: 0px;
+//   text-align: center;
+//   pointer-events: none;
+//   background: transparent;
+// }
+// //
+// .filter-control {
+//   display: block;
+//   background-image: none;
+// }
+
+.rmd-circle {
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  background: green;
+  margin: 3px 0 -3px;
+}
+.rmd-circle-red {
+  background: red;
+}
+.icon-caret-down:before {
+  content: "\f0d7";
+  position: relative;
+  top: 2px;
+}
+.icon-caret-up:before {
+  content: "\f0d8";
+  position: relative;
+  top: 2px;
+}
+.rmd-threshold-red {
+  color: red;
+}
+.rmd-threshold-green {
+  color: green;
+}
+
+.rmd-px-machine-icon {
+    background-image: url("../images/arrow.svg");
+    background-repeat: no-repeat;
+    display: inline-block;
+    background-position: 0 6px;
+    width: 16px;
+    height: 16px;
+    margin-left: 3px;
+}
+.icon-bar-chart:before {
+  margin-left: 3px;
+}
+
+// Trumps
+@import "inuit-clearfix/_trumps.clearfix.scss";
+
+$inuit-enable-margins--none       : true;
+$inuit-enable-margins--small      : true;
+$inuit-enable-margins--large      : true;
+$inuit-enable-paddings--none      : true;
+$inuit-enable-paddings--small     : true;
+$inuit-enable-paddings--large      : true;
+@import "px-spacing-responsive-design/_trumps.spacing-responsive.scss";
+@import "px-widths-responsive-design/_trumps.widths-responsive.scss";
